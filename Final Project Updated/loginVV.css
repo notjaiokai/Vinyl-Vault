@@ -1,0 +1,151 @@
+/* ---------- Login page styles: background, card glow, and purple accents ---------- */
+
+body.about-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('login background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -3;
+}
+
+body.about-page::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7) !important;
+    z-index: -2 !important;
+    animation: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    animation: purpleGlow 3s ease-in-out infinite;
+}
+
+@keyframes purpleGlow {
+    0%, 100% {
+        box-shadow: 0 0 40px rgba(123, 76, 255, 0.8), 
+                    0 0 80px rgba(123, 76, 255, 0.6),
+                    0 0 120px rgba(123, 76, 255, 0.4),
+                    0 0 160px rgba(123, 76, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 60px rgba(123, 76, 255, 1), 
+                    0 0 120px rgba(123, 76, 255, 0.8),
+                    0 0 180px rgba(123, 76, 255, 0.6),
+                    0 0 240px rgba(123, 76, 255, 0.4);
+    }
+}
+
+@keyframes breatheIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    60% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.text-center > h1:nth-of-type(1) {
+    animation: breatheIn 1.2s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.text-center > h1:nth-of-type(2) {
+    animation: breatheIn 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.text-center > .lead {
+    animation: breatheIn 1.2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.text-muted {
+    color: #e0e0e0 !important;
+}
+
+h1.text-primary {
+    color: #fff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Purple takeover: swap blues for vibrant violets ---------- */
+.text-primary {
+    color: #7b4cff !important;
+}
+
+.btn-primary {
+    background-color: #7b4cff !important;
+    border-color: #7b4cff !important;
+}
+
+.btn-primary:hover {
+    background-color: #6a3de8 !important;
+    border-color: #6a3de8 !important;
+}
+
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:focus-visible,
+.btn-check:checked + .btn-primary,
+.btn-check:active + .btn-primary {
+    background-color: #6a3de8 !important;
+    border-color: #6a3de8 !important;
+    box-shadow: 0 0 0 0.25rem rgba(123, 76, 255, 0.35) !important;
+}
+
+#login-btn {
+    background: linear-gradient(135deg, #7b4cff, #9b6fff) !important;
+    border: none !important;
+    color: white !important;
+}
+
+#login-btn:hover {
+    background: linear-gradient(135deg, #6a3de8, #8a5eee) !important;
+}
+
+.btn-outline-primary {
+    color: #7b4cff !important;
+    border-color: #7b4cff !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #7b4cff !important;
+    border-color: #7b4cff !important;
+    color: white !important;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #7b4cff, #9b6fff) !important;
+}
+
+/* ---------- Demo box: clean white with a purple border ---------- */
+.alert-info {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #7b4cff !important;
+}
+
+.alert-info .text-primary {
+    color: #7b4cff !important;
+}
+
+.alert-info .alert-heading {
+    color: #000000 !important;
+}
