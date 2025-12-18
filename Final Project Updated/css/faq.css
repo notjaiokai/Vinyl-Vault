@@ -2,7 +2,7 @@
 * { box-sizing: border-box; }
 body {
     margin: 0;
-    font-family: 'Space Grotesk', 'Sora', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -177,7 +177,7 @@ body.contact-page::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: url("contact us pag image.jpg") center/cover no-repeat;
+    background: url("../Images/contact us pag image.jpg") center/cover no-repeat;
     border-radius: 12px;
     margin: 16px;
 }
@@ -330,6 +330,23 @@ body.contact-page::after {
     border-color: var(--accent);
     box-shadow: 0 0 0 3px rgba(4, 76, 61, 0.12);
     transform: translateY(-2px);
+    background: #ffffff;
+    color: #0d2a32;
+}
+
+.contact-page .field input:-webkit-autofill,
+.contact-page .field input:-webkit-autofill:hover,
+.contact-page .field input:-webkit-autofill:focus,
+.contact-page .field textarea:-webkit-autofill,
+.contact-page .field textarea:-webkit-autofill:hover,
+.contact-page .field textarea:-webkit-autofill:focus,
+.contact-page .field select:-webkit-autofill,
+.contact-page .field select:-webkit-autofill:hover,
+.contact-page .field select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #0d2a32;
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+    box-shadow: 0 0 0 1000px #ffffff inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 .contact-page .field textarea {
@@ -562,7 +579,11 @@ body.about-page::after {
     gap: 32px;
     position: relative;
     text-align: center;
-    background: url('5.jpg') center/cover no-repeat;
+    /* Use explicit properties and a correct relative path from this CSS file to the image; adjust path if needed */
+    background-image: url('../images/5.jpg'), url('5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 600px;
 }

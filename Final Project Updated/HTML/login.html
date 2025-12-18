@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyl Vault | Spin Into Your Account</title>
+    <link rel="icon" type="image/png" href="../Images/vinyl.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global-polish.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating Vinyl Records Background -->
+    <div class="vinyl-background">
+        <div class="floating-vinyl vinyl-1"><i class="fas fa-record-vinyl"></i></div>
+        <div class="floating-vinyl vinyl-2"><i class="fas fa-record-vinyl"></i></div>
+        <div class="floating-vinyl vinyl-3"><i class="fas fa-record-vinyl"></i></div>
+        <div class="floating-vinyl vinyl-4"><i class="fas fa-record-vinyl"></i></div>
+        <div class="floating-vinyl vinyl-5"><i class="fas fa-record-vinyl"></i></div>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-card slide-in-up">
+            <div class="auth-header">
+                <div class="logo-animated">
+                    <div class="spinning-record">
+                        <img src="../Images/vinyl.png" alt="Vinyl Vault Logo" class="logo-icon">
+                    </div>
+                    <h1 class="text-gradient">Vinyl Vault</h1>
+                </div>
+                <h2>Spin Into Your Account 🎵</h2>
+                <p>Drop the needle and let the music play</p>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Your secret groove" required>
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberMe">
+                        <span><i class="fas fa-music"></i> Keep me logged in</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot your tune?</a>
+                </div>
+
+                <button type="submit" class="btn-primary btn-animated" id="loginBtn">
+                    <span class="btn-text">
+                        <i class="fas fa-play"></i> Start Playing
+                    </span>
+                    <span class="btn-loader"><i class="fas fa-circle-notch fa-spin"></i></span>
+                </button>
+
+                <div class="divider">
+                    <span><i class="fas fa-compact-disc"></i></span>
+                </div>
+
+                <div class="social-login">
+                    <p>Or connect with</p>
+                    <div class="social-buttons">
+                        <button type="button" class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button type="button" class="social-btn twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button type="button" class="social-btn google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button type="button" class="social-btn instagram">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <p class="auth-switch">
+                    New to the Vault? <a href="signup.html">Join the collection <i class="fas fa-arrow-right"></i></a>
+                </p>
+            </form>
+
+            <div class="demo-info bounce-in">
+                <p><i class="fas fa-info-circle"></i> <strong>Demo Account:</strong> demo@vinylvault.com | password123</p>
+            </div>
+        </div>
+
+        <div class="auth-visual slide-in-right">
+            <!-- Animated Vinyl Player -->
+            <div class="vinyl-player">
+                <div class="turntable">
+                    <div class="platter rotating">
+                        <div class="vinyl-record"></div>
+                        <div class="label"></div>
+                    </div>
+                    <div class="tonearm"></div>
+                </div>
+            </div>
+
+            <div class="auth-visual-content">
+                <h2>Your Music, Your Moment</h2>
+                <p>Join thousands of collectors spinning their favorite tracks</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-record-vinyl"></i>
+                        <span class="stat-number">5,234+</span>
+                        <span class="stat-label">Rare Records</span>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-number">1.5k+</span>
+                        <span class="stat-label">Happy Collectors</span>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-heart"></i>
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Music Genres</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <!-- Audio Element for Fun -->
+    <audio id="loginSound" src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBzOM0vPTgjMGHm7A7+OZSA0PVqzn77BdGAg+ltryxW8gBi2AzvLaizsIGGS57OihUBAMUKXh8LZkHQU5j9XvyXsmBSh7yO/flEIKFWCz5O6nVRQKRp7f7r5uIQc0jdDyznwzBiFqvu3mnEcODlWq5O+yXxgKPJfY88BxIwYtfs/v1oU7CBpns+zilE8NDVSV4euqWBUIQZva8r1sIgY2kdDu0oA2Bx5swu7hmkUND1Wn4+6wXhoJOpPT78pyJAUpdsnq3pJECh" preload="auto"></audio>
+
+    <script src="../JS/auth.js"></script>
+    <script>
+        // Add fun entrance animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Play subtle sound on page load (optional)
+            // document.getElementById('loginSound').play().catch(() => {});
+
+            // Add particle effect on button hover
+            const loginBtn = document.getElementById('loginBtn');
+            loginBtn.addEventListener('mousemove', (e) => {
+                const rect = loginBtn.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const particle = document.createElement('span');
+                particle.className = 'particle';
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                loginBtn.appendChild(particle);
+
+                setTimeout(() => particle.remove(), 1000);
+            });
+        });
+    </script>
+
+    <style>
+        /* Additional Creative Styles */
+        .vinyl-background {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .floating-vinyl {
+            position: absolute;
+            font-size: clamp(40px, 5vw, 80px);
+            color: rgba(123, 76, 255, 0.1);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .vinyl-1 { top: 10%; left: 10%; animation-delay: 0s; }
+        .vinyl-2 { top: 20%; right: 15%; animation-delay: 2s; animation-duration: 25s; }
+        .vinyl-3 { bottom: 15%; left: 20%; animation-delay: 4s; animation-duration: 30s; }
+        .vinyl-4 { bottom: 20%; right: 10%; animation-delay: 6s; }
+        .vinyl-5 { top: 50%; left: 5%; animation-delay: 8s; animation-duration: 35s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-30px) rotate(90deg); }
+            50% { transform: translateY(-60px) rotate(180deg); }
+            75% { transform: translateY(-30px) rotate(270deg); }
+        }
+
+        .logo-animated {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .spinning-record {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            animation: spin 4s linear infinite;
+        }
+
+        .spinning-record img {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 4px 12px rgba(123, 76, 255, 0.4));
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .slide-in-up {
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .bounce-in {
+            animation: bounceIn 1s ease-out 0.5s both;
+        }
+
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 1; transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+
+        .btn-animated {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-loader {
+            display: none;
+        }
+
+        .btn-primary.loading .btn-text {
+            opacity: 0;
+        }
+
+        .btn-primary.loading .btn-loader {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particleFloat 1s ease-out forwards;
+        }
+
+        @keyframes particleFloat {
+            to {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-btn.facebook { background: #1877f2; }
+        .social-btn.twitter { background: #1da1f2; }
+        .social-btn.google { background: #ea4335; }
+        .social-btn.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+        .social-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Vinyl Player Animation */
+        .vinyl-player {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 2rem;
+            perspective: 1000px;
+        }
+
+        .turntable {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .platter {
+            width: 100%;
+            height: 100%;
+            background: #2a2a2a;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .rotating {
+            animation: rotate 3s linear infinite;
+        }
+
+        .vinyl-record {
+            width: 85%;
+            height: 85%;
+            background: radial-gradient(circle, #1a1a1a 30%, #2a2a2a 31%, #2a2a2a 32%, #1a1a1a 33%, #1a1a1a 60%, transparent 61%);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .label {
+            width: 40%;
+            height: 40%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .tonearm {
+            width: 120px;
+            height: 8px;
+            background: linear-gradient(90deg, #666 0%, #999 100%);
+            position: absolute;
+            top: 20%;
+            right: -10px;
+            transform-origin: right center;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: tonearmMove 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes tonearmMove {
+            0% { transform: rotate(-30deg); }
+            100% { transform: rotate(-20deg); }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-card i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+    </style>
+</body>
+</html>
