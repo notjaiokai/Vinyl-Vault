@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyl Vault - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Sidebar - Will be dynamically loaded -->
+        <div class="sidebar" id="sidebar">
+            <!-- Sidebar content loaded by JavaScript -->
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navigation -->
+            <div class="top-nav">
+                <div class="logo">🎵 VINYL VAULT</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Store</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div id="navButtons">
+                    <!-- Login/Logout buttons loaded by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <h1 class="hero-title">Where Music Truly Lives</h1>
+                <p class="hero-subtitle">Discover rare vinyls, classic CDs, and timeless cassettes. Experience music the way it was meant to be heard.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="window.location.href='products.html'">Browse Collection</button>
+                    <button class="btn-secondary" onclick="window.location.href='about.html'">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Featured Collection -->
+            <div class="vinyl-display">
+                <div class="vinyl-header">
+                    <h2>Featured Collection</h2>
+                </div>
+
+                <!-- Bootstrap Carousel -->
+                <div id="vinylCarousel" class="carousel slide vinyl-carousel" data-bs-ride="carousel">
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#vinylCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#vinylCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#vinylCarousel" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="vinyl-grid">
+                                <div class="vinyl-card">
+                                    <div class="vinyl-image-wrapper">
+                                        <div class="vinyl-label" style="background: linear-gradient(135deg, #ffd93d 0%, #ffed4e 100%);"></div>
+                                        <div class="vinyl-center"></div>
+                                    </div>
+                                    <div class="vinyl-title-bar">
+                                        <div class="vinyl-title">Dark Side of the Moon</div>
+                                        <div class="play-icon">
+                                            <span onclick="playVinyl()">▶</span>
+                                            <span onclick="addToFavorites('vinyl1')">♥</span>
+                                        </div>
+                                    </div>
+                                    <div class="vinyl-artist">Pink Floyd • 1973</div>
+                                    <div class="waveform">
+                                        <div class="wave-bar" style="height: 30%;"></div>
+                                        <div class="wave-bar" style="height: 50%;"></div>
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                        <div class="wave-bar" style="height: 40%;"></div>
+                                        <div class="wave-bar" style="height: 80%;"></div>
+                                        <div class="wave-bar" style="height: 60%;"></div>
+                                        <div class="wave-bar" style="height: 90%;"></div>
+                                        <div class="wave-bar" style="height: 45%;"></div>
+                                        <div class="wave-bar" style="height: 65%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                    </div>
+                                    <div class="vinyl-footer">
+                                        <div class="vinyl-price">$45.99</div>
+                                        <div class="vinyl-time">Limited Edition</div>
+                                    </div>
+                                </div>
+
+                                <div class="vinyl-card">
+                                    <div class="vinyl-image-wrapper">
+                                        <div class="vinyl-label" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);"></div>
+                                        <div class="vinyl-center"></div>
+                                    </div>
+                                    <div class="vinyl-title-bar">
+                                        <div class="vinyl-title">Abbey Road</div>
+                                        <div class="play-icon">
+                                            <span onclick="playVinyl()">▶</span>
+                                            <span onclick="addToFavorites('vinyl2')">♥</span>
+                                        </div>
+                                    </div>
+                                    <div class="vinyl-artist">The Beatles • 1969</div>
+                                    <div class="waveform">
+                                        <div class="wave-bar" style="height: 40%;"></div>
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                        <div class="wave-bar" style="height: 50%;"></div>
+                                        <div class="wave-bar" style="height: 85%;"></div>
+                                        <div class="wave-bar" style="height: 60%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                        <div class="wave-bar" style="height: 55%;"></div>
+                                        <div class="wave-bar" style="height: 90%;"></div>
+                                        <div class="wave-bar" style="height: 45%;"></div>
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                    </div>
+                                    <div class="vinyl-footer">
+                                        <div class="vinyl-price">$38.50</div>
+                                        <div class="vinyl-time">In Stock</div>
+                                    </div>
+                                </div>
+
+                                <div class="vinyl-card">
+                                    <div class="vinyl-image-wrapper">
+                                        <div class="vinyl-label" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                                        <div class="vinyl-center"></div>
+                                    </div>
+                                    <div class="vinyl-title-bar">
+                                        <div class="vinyl-title">Kind of Blue</div>
+                                        <div class="play-icon">
+                                            <span onclick="playVinyl()">▶</span>
+                                            <span onclick="addToFavorites('vinyl3')">♥</span>
+                                        </div>
+                                    </div>
+                                    <div class="vinyl-artist">Miles Davis • 1959</div>
+                                    <div class="waveform">
+                                        <div class="wave-bar" style="height: 55%;"></div>
+                                        <div class="wave-bar" style="height: 45%;"></div>
+                                        <div class="wave-bar" style="height: 80%;"></div>
+                                        <div class="wave-bar" style="height: 65%;"></div>
+                                        <div class="wave-bar" style="height: 50%;"></div>
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                        <div class="wave-bar" style="height: 85%;"></div>
+                                        <div class="wave-bar" style="height: 40%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                        <div class="wave-bar" style="height: 60%;"></div>
+                                    </div>
+                                    <div class="vinyl-footer">
+                                        <div class="vinyl-price">$52.00</div>
+                                        <div class="vinyl-time">Limited</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="vinyl-grid">
+                                <div class="vinyl-card">
+                                    <div class="vinyl-image-wrapper">
+                                        <div class="vinyl-label" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                                        <div class="vinyl-center"></div>
+                                    </div>
+                                    <div class="vinyl-title-bar">
+                                        <div class="vinyl-title">Rumours</div>
+                                        <div class="play-icon">
+                                            <span onclick="playVinyl()">▶</span>
+                                            <span onclick="addToFavorites('vinyl4')">♥</span>
+                                        </div>
+                                    </div>
+                                    <div class="vinyl-artist">Fleetwood Mac • 1977</div>
+                                    <div class="waveform">
+                                        <div class="wave-bar" style="height: 45%;"></div>
+                                        <div class="wave-bar" style="height: 65%;"></div>
+                                        <div class="wave-bar" style="height: 80%;"></div>
+                                        <div class="wave-bar" style="height: 55%;"></div>
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                        <div class="wave-bar" style="height: 85%;"></div>
+                                        <div class="wave-bar" style="height: 60%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                        <div class="wave-bar" style="height: 50%;"></div>
+                                        <div class="wave-bar" style="height: 90%;"></div>
+                                    </div>
+                                    <div class="vinyl-footer">
+                                        <div class="vinyl-price">$42.00</div>
+                                        <div class="vinyl-time">Classic</div>
+                                    </div>
+                                </div>
+
+                                <div class="vinyl-card">
+                                    <div class="vinyl-image-wrapper">
+                                        <div class="vinyl-label" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                                        <div class="vinyl-center"></div>
+                                    </div>
+                                    <div class="vinyl-title-bar">
+                                        <div class="vinyl-title">Purple Rain</div>
+                                        <div class="play-icon">
+                                            <span onclick="playVinyl()">▶</span>
+                                            <span onclick="addToFavorites('vinyl5')">♥</span>
+                                        </div>
+                                    </div>
+                                    <div class="vinyl-artist">Prince • 1984</div>
+                                    <div class="waveform">
+                                        <div class="wave-bar" style="height: 50%;"></div>
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                        <div class="wave-bar" style="height: 60%;"></div>
+                                        <div class="wave-bar" style="height: 85%;"></div>
+                                        <div class="wave-bar" style="height: 55%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                        <div class="wave-bar" style="height: 65%;"></div>
+                                        <div class="wave-bar" style="height: 80%;"></div>
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                        <div class="wave-bar" style="height: 90%;"></div>
+                                    </div>
+                                    <div class="vinyl-footer">
+                                        <div class="vinyl-price">$48.99</div>
+                                        <div class="vinyl-time">Rare</div>
+                                    </div>
+                                </div>
+
+                                <div class="vinyl-card">
+                                    <div class="vinyl-image-wrapper">
+                                        <div class="vinyl-label" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                                        <div class="vinyl-center"></div>
+                                    </div>
+                                    <div class="vinyl-title-bar">
+                                        <div class="vinyl-title">Blue Train</div>
+                                        <div class="play-icon">
+                                            <span onclick="playVinyl()">▶</span>
+                                            <span onclick="addToFavorites('vinyl6')">♥</span>
+                                        </div>
+                                    </div>
+                                    <div class="vinyl-artist">John Coltrane • 1957</div>
+                                    <div class="waveform">
+                                        <div class="wave-bar" style="height: 60%;"></div>
+                                        <div class="wave-bar" style="height: 50%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                        <div class="wave-bar" style="height: 65%;"></div>
+                                        <div class="wave-bar" style="height: 80%;"></div>
+                                        <div class="wave-bar" style="height: 55%;"></div>
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                        <div class="wave-bar" style="height: 85%;"></div>
+                                        <div class="wave-bar" style="height: 60%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                    </div>
+                                    <div class="vinyl-footer">
+                                        <div class="vinyl-price">$55.00</div>
+                                        <div class="vinyl-time">Collector's</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="vinyl-grid">
+                                <div class="vinyl-card">
+                                    <div class="vinyl-image-wrapper">
+                                        <div class="vinyl-label" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                                        <div class="vinyl-center"></div>
+                                    </div>
+                                    <div class="vinyl-title-bar">
+                                        <div class="vinyl-title">Thriller</div>
+                                        <div class="play-icon">
+                                            <span onclick="playVinyl()">▶</span>
+                                            <span onclick="addToFavorites('vinyl7')">♥</span>
+                                        </div>
+                                    </div>
+                                    <div class="vinyl-artist">Michael Jackson • 1982</div>
+                                    <div class="waveform">
+                                        <div class="wave-bar" style="height: 55%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                        <div class="wave-bar" style="height: 65%;"></div>
+                                        <div class="wave-bar" style="height: 85%;"></div>
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                        <div class="wave-bar" style="height: 80%;"></div>
+                                        <div class="wave-bar" style="height: 60%;"></div>
+                                        <div class="wave-bar" style="height: 90%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                        <div class="wave-bar" style="height: 85%;"></div>
+                                    </div>
+                                    <div class="vinyl-footer">
+                                        <div class="vinyl-price">$39.99</div>
+                                        <div class="vinyl-time">Best Seller</div>
+                                    </div>
+                                </div>
+
+                                <div class="vinyl-card">
+                                    <div class="vinyl-image-wrapper">
+                                        <div class="vinyl-label" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+                                        <div class="vinyl-center"></div>
+                                    </div>
+                                    <div class="vinyl-title-bar">
+                                        <div class="vinyl-title">The Wall</div>
+                                        <div class="play-icon">
+                                            <span onclick="playVinyl()">▶</span>
+                                            <span onclick="addToFavorites('vinyl8')">♥</span>
+                                        </div>
+                                    </div>
+                                    <div class="vinyl-artist">Pink Floyd • 1979</div>
+                                    <div class="waveform">
+                                        <div class="wave-bar" style="height: 65%;"></div>
+                                        <div class="wave-bar" style="height: 55%;"></div>
+                                        <div class="wave-bar" style="height: 80%;"></div>
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                        <div class="wave-bar" style="height: 85%;"></div>
+                                        <div class="wave-bar" style="height: 60%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                        <div class="wave-bar" style="height: 90%;"></div>
+                                        <div class="wave-bar" style="height: 65%;"></div>
+                                        <div class="wave-bar" style="height: 80%;"></div>
+                                    </div>
+                                    <div class="vinyl-footer">
+                                        <div class="vinyl-price">$54.99</div>
+                                        <div class="vinyl-time">Double Album</div>
+                                    </div>
+                                </div>
+
+                                <div class="vinyl-card">
+                                    <div class="vinyl-image-wrapper">
+                                        <div class="vinyl-label" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);"></div>
+                                        <div class="vinyl-center"></div>
+                                    </div>
+                                    <div class="vinyl-title-bar">
+                                        <div class="vinyl-title">Back in Black</div>
+                                        <div class="play-icon">
+                                            <span onclick="playVinyl()">▶</span>
+                                            <span onclick="addToFavorites('vinyl9')">♥</span>
+                                        </div>
+                                    </div>
+                                    <div class="vinyl-artist">AC/DC • 1980</div>
+                                    <div class="waveform">
+                                        <div class="wave-bar" style="height: 70%;"></div>
+                                        <div class="wave-bar" style="height: 85%;"></div>
+                                        <div class="wave-bar" style="height: 60%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                        <div class="wave-bar" style="height: 90%;"></div>
+                                        <div class="wave-bar" style="height: 65%;"></div>
+                                        <div class="wave-bar" style="height: 80%;"></div>
+                                        <div class="wave-bar" style="height: 55%;"></div>
+                                        <div class="wave-bar" style="height: 75%;"></div>
+                                        <div class="wave-bar" style="height: 85%;"></div>
+                                    </div>
+                                    <div class="vinyl-footer">
+                                        <div class="vinyl-price">$41.50</div>
+                                        <div class="vinyl-time">Rock Classic</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#vinylCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#vinylCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Why Choose Us Section -->
+            <div class="features-section">
+                <h2 class="section-title">Why Choose Vinyl Vault?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎵</div>
+                        <h3>Custom Vinyl Pressing</h3>
+                        <p>Send us your favorite tracks and we'll press them onto vinyl just for you</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📀</div>
+                        <h3>Curated Collections</h3>
+                        <p>Explore carefully selected vinyls, CDs, and cassettes spanning every genre</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Community of Collectors</h3>
+                        <p>Join fellow enthusiasts who understand that music is meant to be treasured</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Player Bar -->
+            <div class="player-bar">
+                <div class="player-controls">
+                    <button class="control-btn">⏮</button>
+                    <button class="control-btn">▶</button>
+                    <button class="control-btn">⏭</button>
+                </div>
+                <div class="time-display">
+                    <span>0:00</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="time-display">
+                    <span>0:00</span>
+                </div>
+                <div class="now-playing">
+                    <div class="now-playing-cover"></div>
+                    <div class="now-playing-info">
+                        <h4>No track playing</h4>
+                        <p>Select a vinyl to play</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
