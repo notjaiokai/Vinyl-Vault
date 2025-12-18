@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinyl Vault | Register</title>
+  <link rel="icon" type="image/png" href="vinyl.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Sora:wght@400;500;600&family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="faq.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="registerVV.css" />
+</head>
+<body class="contact-page">
+  <header>
+    <div class="container-fluid px-3 py-2">
+      <ul class="nav nav-tabs">
+        <li class="nav-item me-3">
+          <a class="nav-link p-1" href="index.html" aria-label="Home" target="_blank" rel="noopener">
+            <img src="vinyl.png" class="nav-icon" alt="Home">
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="AboutUs.html" target="_blank" rel="noopener">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html" target="_blank" rel="noopener">Products / Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html" target="_blank" rel="noopener">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="ContactUs.html" target="_blank" rel="noopener">Contact Us</a></li>
+        <li class="nav-item ms-auto"><a class="nav-link" href="loginVV.html.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link pill-registration active" aria-current="page" href="register.html">Register Here!</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ---------- REGISTER: create your account with a smooth form ---------- -->
+  <main class="hero">
+    <div class="hero-wrap" style="display: flex; justify-content: center; align-items: center;">
+      <div style="max-width: 700px; width: 100%;">
+        <h1 class="display-3 mb-2" style="font-family: 'Lobster', cursive; color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.025); text-align: center; font-size: 4rem;">
+          Vinyl Vault
+        </h1>
+        <h1 style="text-align: center; margin-bottom: 0.5rem; color: #ffffff; margin-top: 0; font-size: 2.2rem;">Create An Account <em>Today!</em></h1>
+        <p class="form-intro" style="text-align: center; color: #e6e9ee; margin-bottom: 2rem; font-size: 1.05rem;">Join our community of vinyl enthusiasts today.</p>
+
+        <div class="register-card">
+          <div id="successMsg" class="success" style="display: none; padding: 1rem; background: #d4edda; color: #155724; border-radius: 10px; margin-bottom: 1rem;">
+            Registration successful!
+          </div>
+
+          <form class="contact-form" id="registerForm" novalidate>
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Jane Doe" required />
+              <div id="nameErr" class="error" style="color: #dc3545; font-size: 0.875rem; margin-top: 0.35rem;"></div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="you@example.com" required />
+              <div id="emailErr" class="error" style="color: #dc3545; font-size: 0.875rem; margin-top: 0.35rem;"></div>
+            </div>
+
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="Enter a strong password" required />
+              <div id="passwordErr" class="error" style="color: #dc3545; font-size: 0.875rem; margin-top: 0.35rem;"></div>
+            </div>
+
+            <div class="field">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" id="confirmPassword" placeholder="Re-enter your password" required />
+              <div id="confirmErr" class="error" style="color: #dc3545; font-size: 0.875rem; margin-top: 0.35rem;"></div>
+            </div>
+
+            <div style="margin: 1rem 0; padding: 0.75rem; background: #f8fafc; border: 1px solid #e9ecef; border-radius: 8px; display: flex; align-items: center; gap: 10px;">
+              <input type="checkbox" id="showPassword" style="width: 20px; height: 20px; cursor: pointer; accent-color: #7b4cff;">
+              <label for="showPassword" style="margin: 0; cursor: pointer; color: #1f2937; font-weight: 600; font-size: 0.95rem;">Show Password</label>
+            </div>
+
+            <button class="btn form-submit w-100" type="submit">Register</button>
+            <p style="margin-top: 0.85rem; text-align: center; color: #6a7280; font-size: 0.98rem;">
+              or login <a href="loginVV.html.html" style="color: #7b4cff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">here</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <section class="footer-newsletter">
+        <h2>Are You <em>Registered?</em></h2>
+        <p>Join to get exclusive offers & discounts</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <label for="newsletterEmail">Email *</label>
+          <div class="newsletter-controls">
+            <input id="newsletterEmail" type="email" placeholder="Email" required>
+            <button type="submit">Join</button>
+          </div>
+        </form>
+      </section>
+      <hr class="footer-divider">
+      <section class="footer-grid">
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html">All Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Store</h4>
+          <p>1 Cheery Drive, Kingston Street, Kingston JA</p>
+          <p>Monday–Friday: 11am–10pm<br>Saturday–Sunday: Closed</p>
+          <p>Tel: 123-456-7890<br>Email: info@vinylvault.com</p>
+        </div>
+        <div class="footer-col">
+          <h4>Policy</h4>
+          <ul>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Store Policy</a></li>
+            <li><a href="#">Payment Methods</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <p>Tel: 123-456-7890<br>Email: info@vinylvault.com</p>
+          <div class="socials-row" aria-label="Social links">
+            <span class="soc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 3a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></span>
+            <span class="soc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 5.8c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.2 1.7-2.1-.8.5-1.7.9-2.6 1.1-.8-.8-1.9-1.3-3.1-1.3-2.4 0-4.4 2-4.4 4.4 0 .3 0 .7.1 1C8 9.4 5.1 7.9 3.2 5.6c-.3.6-.5 1.3-.5 2 0 1.5.8 2.8 2 3.6-.6 0-1.2-.2-1.7-.5v.1c0 2.1 1.5 3.8 3.5 4.2-.4.1-.8.1-1.2.1-.3 0-.6 0-.8-.1.6 1.8 2.3 3.1 4.3 3.1-1.6 1.3-3.6 2.1-5.8 2.1H2c2 1.3 4.4 2 7 2 8.4 0 13-7 13-13v-.6c.9-.6 1.6-1.3 2-2.1z"/></svg></span>
+            <span class="soc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7h-2.6V12h2.6V9.8c0-2.6 1.5-4 3.8-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7C18.3 21.1 22 17 22 12z"/></svg></span>
+          </div>
+        </div>
+      </section>
+      <div class="footer-meta">
+        <div>© 2025 by Vinyl Vault</div>
+        <div></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="site.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

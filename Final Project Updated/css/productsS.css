@@ -1,0 +1,135 @@
+/* ---------- Products page style buffet: cards, headings, and that glowy search bar ---------- */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(123, 76, 255, 0.2);
+}
+
+.card img {
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.product {
+    transition: opacity 0.3s ease;
+}
+
+/* ---------- Heading animations: a gentle grow-in for page titles ---------- */
+h1, h2 {
+    animation: growIn 0.6s ease-out;
+}
+
+@keyframes growIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ---------- Search bar effects: smooth scaling and purple glow vibes ---------- */
+.search-input {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-input:focus {
+    transform: scale(1.02);
+    animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(123, 76, 255, 0.3), 0 0 0 0 rgba(123, 76, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(123, 76, 255, 0.5), 0 0 0 8px rgba(123, 76, 255, 0);
+    }
+}
+
+.glow-blue {
+    position: relative;
+    z-index: 1;
+}
+
+.glow-blue::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 150%;
+    background: radial-gradient(ellipse at center, rgba(123, 76, 255, 0.4), rgba(123, 76, 255, 0.2), transparent);
+    filter: blur(20px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.search-wrapper {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    position: relative;
+    filter: drop-shadow(0 10px 30px rgba(164, 107, 255, 0.25));
+}
+
+.search-input {
+    border-radius: 999px;
+    padding: 16px 58px 16px 22px;
+    border: 2px solid rgba(164, 107, 255, 0.55);
+    background: #ffffff;
+    color: #1c1a29;
+    font-size: 16px;
+    transition: all 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 10px 24px rgba(164, 107, 255, 0.18);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: rgba(164, 107, 255, 0.95);
+    box-shadow: 0 0 0 7px rgba(164, 107, 255, 0.28), 0 18px 44px rgba(164, 107, 255, 0.45);
+    background: #ffffff;
+}
+
+.search-input:hover {
+    border-color: rgba(164, 107, 255, 0.8);
+    box-shadow: 0 12px 30px rgba(164, 107, 255, 0.28);
+}
+
+.search-input::placeholder {
+    color: rgba(28, 26, 41, 0.6);
+}
+
+.search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(123, 76, 255, 0.85);
+    pointer-events: none;
+}
+
+#noResults {
+    display: none;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #c7ccd1;
+    font-size: 1.2rem;
+    animation: fadeInUp 0.5s ease;
+}
+
+#noResults svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
